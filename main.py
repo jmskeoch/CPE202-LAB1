@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import *
 import unittest
 import math
+
 # ==== 1. DATA DEFINITIONS ====
 
 # 1) We will convert a given Celsius temperature to Fahrenheit
@@ -9,14 +10,14 @@ celsius: TypeAlias = float
 fahrenheit: TypeAlias = float
 
 # 2) We will represent a price record with its price and product
-product_price: TypeAlias = float
+product_price: TypeAlias = int
 
 
 # 3) We will represent a Price Record with a product name and its price
 @dataclass
 class PriceRecord:
     name: str
-    price: float
+    price: int
 
 
 # 4) We will represent a web browser Tab with its current URL and Access Date
@@ -31,6 +32,7 @@ class Tab:
 # 1) This function takes a given price (float) as an input and returns the input with added sales tax (float)
 """
 Returns the inputted price with added sales tax
+
 :param price: the original input price (float)
 :return: new price with added sales tax (float)
 """
@@ -38,6 +40,7 @@ Returns the inputted price with added sales tax
 # 2) This function takes the item and returns the corresponding price
 """
 Finds the price for a inputted item
+
 :param item_name: name of item we wish to get price info from (str)
 :return: store price of item_name (float)
 """
@@ -45,6 +48,7 @@ Finds the price for a inputted item
 # 3) Takes a given geographic_region object to and given database to find median incomes of all homes in region
 """
 Finds the median household income for a given region
+
 :param geographic_region: desired region for income calculations (str)
 :param database: income database (Database)
 :return: median household income (float)
@@ -53,6 +57,7 @@ Finds the median household income for a given region
 # 4) This function uses a given geographic region and database to find overlapping cities
 """
 Finds any overlapping cities in a given region
+
 :param geographic_region: desired region for calculations (str)
 :param database: city region database (Database)
 :return: overlapping cities (str[])
